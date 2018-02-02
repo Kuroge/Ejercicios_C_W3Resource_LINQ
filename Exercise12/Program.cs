@@ -10,7 +10,11 @@ namespace Exercise12
     {
         static void Main(string[] args)
         {
-
+            Console.WriteLine("Introduce una frase para saber que palabras están en mayúscula");
+            List<string> palabras = Console.ReadLine().Split(' ').ToList();
+            
+            Console.WriteLine(string.Join(" ,", palabras.Where(x => x == x.ToUpper())));
+            Console.ReadKey();
         }
     }
 }
